@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {AuthorizationModule} from './authorization/authorization.module';
 
 import { AppComponent } from './app.component';
 
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule
+    AuthorizationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
