@@ -6,7 +6,7 @@
       <input type="text" class="form-control"
              id="username"
              [ngClass]="{'has-error' : loginForm.controls['userName'].hasError('required') && (loginForm.controls['userName'].touched || invalid ) }"
-             [formControl]="userName"
+             [formControl]="username"
              placeholder="User name or email" />
     </div>
   </div>
