@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {LogIn} from '../../models/LogIn';
+import { LogInModel} from '../../models/LogInModel';
 
 @Component({
   selector: 'app-sing-in',
@@ -10,7 +10,7 @@ import {LogIn} from '../../models/LogIn';
 export class SingInComponent implements OnInit {
 
   loginForm: FormGroup;
-  model: LogIn = new LogIn();
+  model: LogInModel = new LogInModel();
 
   constructor(private fb: FormBuilder) { }
 
