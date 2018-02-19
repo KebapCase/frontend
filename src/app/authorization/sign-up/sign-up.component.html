@@ -1,3 +1,38 @@
-<p>
-  sign-up works!
-</p>
+<form [formGroup]="registrationForm">
+  <div class="form-group">
+    <label for="username">User Name</label>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span>
+      <input type="text" class="form-control"
+             id="username"
+             [ngClass]="{'has-error' : loginForm.controls['username'].hasError('required') && (loginForm.controls['username'].touched || invalid ) }"
+             [formControl]="username"
+             placeholder="User name or email" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email">Password</label>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input type="email" class="form-control"
+             id="email"
+             [ngClass]="{'has-error' : loginForm.controls['email'].hasError('required') && (loginForm.controls['email'].touched || invalid ) }"
+             [formControl]="email"
+             placeholder="Password" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input type="password" class="form-control"
+             id="password"
+             [ngClass]="{'has-error' : loginForm.controls['password'].hasError('required') && (loginForm.controls['password'].touched || invalid ) }"
+             [formControl]="password"
+             placeholder="Password" />
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" data-dismiss="modal">SignUp</button>
+  </div>
+</form>
