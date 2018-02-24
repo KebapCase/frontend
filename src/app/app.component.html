@@ -1,11 +1,20 @@
 <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">Navbar</a>
     <div class="navbar-nav">
-      <a  class="nav-item nav-link" data-toggle="modal" data-target="#authorizeModal">SignIn</a>
+      <a  class="nav-item nav-link" (click)="openModal('custom-modal-1')">SignIn</a>
     </div>
 </nav>
 
-<app-authorize-modal></app-authorize-modal>
+<app-modal id="custom-modal-1">
+  <div class="modalWindow">
+    <div class="modalWindow-body">
+      <h1>A Custom Modal!</h1>
+
+      <button (click)="closeModal('custom-modal-1');">Close</button>
+    </div>
+  </div>
+  <div class="modalWindow-background"></div>
+</app-modal>
 
 <div style="text-align:center">
   <h1>
