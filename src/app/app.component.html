@@ -1,44 +1,11 @@
 <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">Navbar</a>
     <div class="navbar-nav">
-      <a  class="nav-item nav-link" data-toggle="modal" data-target="#myModal">SignIn</a>
+      <a  class="nav-item nav-link" data-toggle="modal" data-target="#authorizeModal">SignIn</a>
     </div>
 </nav>
 
-
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-
-        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab">SignIn</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="signup-tab" data-toggle="tab" href="#singup" role="tab">SignUp</a>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane active justify-content-center" id="signin" role="tabpanel">
-            <app-sing-in></app-sing-in>
-          </div>
-          <div class="tab-pane justify-content-center" id="singup" role="tabpanel">
-            <app-sign-up></app-sign-up>
-          </div>
-        </div>
-
-      </div>
-      <div class="modal-footer justify-content-center">
-        <app-social></app-social>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+<app-authorize-modal></app-authorize-modal>
 
 <div style="text-align:center">
   <h1>
