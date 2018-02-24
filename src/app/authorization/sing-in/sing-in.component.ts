@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -9,6 +9,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class SingInComponent implements OnInit {
 
   loginForm: FormGroup;
+  @Output() afterSubmitEvent = new EventEmitter();
 
   constructor(private fb: FormBuilder) {
   }
@@ -22,6 +23,7 @@ export class SingInComponent implements OnInit {
 
   postForm(post) {
     console.log(post);
+    this.afterSubmitEvent.emit(true);
   }
 
 }

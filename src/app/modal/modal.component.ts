@@ -25,7 +25,7 @@ export class ModalComponent implements OnInit {
     this.element.appendTo('body');
     this.element.on('click', function (e: any) {
       const target = $(e.target);
-      if (!target.closest('.modal-body').length) {
+      if (!target.closest('.modalWindow-body').length) {
         modal.close();
       }
     });
@@ -35,11 +35,11 @@ export class ModalComponent implements OnInit {
   open(): void {
     console.log('keeeeek');
     this.element.show();
-    $('body').addClass('modal-open');
+    $('body').addClass('modalWindow-open');
   }
 
   close(): void {
     this.element.hide();
-    $('body').removeClass('modal-open');
+    $('body').removeClass('modalWindow-open');
   }
 }

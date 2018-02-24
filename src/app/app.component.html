@@ -8,9 +8,7 @@
 <app-modal id="custom-modal-1">
   <div class="modalWindow">
     <div class="modalWindow-body">
-      <h1>A Custom Modal!</h1>
-
-      <button (click)="closeModal('custom-modal-1');">Close</button>
+      <app-authorize-modal (authorizeComplited)="closeModal('custom-modal-1')"></app-authorize-modal>
     </div>
   </div>
   <div class="modalWindow-background"></div>
