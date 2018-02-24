@@ -1,12 +1,12 @@
-<form [formGroup]="registrationForm">
+<form [formGroup]="registrationForm" (ngSubmit)="postForm(registrationForm.value)">
   <div class="form-group">
     <label for="username">User Name</label>
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span>
       <input type="text" class="form-control"
              id="username"
-             [ngClass]="{'has-error' : loginForm.controls['username'].hasError('required') && (loginForm.controls['username'].touched || invalid ) }"
-             [formControl]="username"
+             [ngClass]="{'has-error' : registrationForm.controls['username'].hasError('required') && (registrationForm.controls['username'].touched || invalid ) }"
+             formControlName="username"
              placeholder="User name or email" />
     </div>
   </div>
@@ -16,8 +16,8 @@
       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
       <input type="email" class="form-control"
              id="email"
-             [ngClass]="{'has-error' : loginForm.controls['email'].hasError('required') && (loginForm.controls['email'].touched || invalid ) }"
-             [formControl]="email"
+             [ngClass]="{'has-error' : registrationForm.controls['email'].hasError('required') && (registrationForm.controls['email'].touched || invalid ) }"
+             formControlName="email"
              placeholder="Password" />
     </div>
   </div>
@@ -27,12 +27,12 @@
       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
       <input type="password" class="form-control"
              id="password"
-             [ngClass]="{'has-error' : loginForm.controls['password'].hasError('required') && (loginForm.controls['password'].touched || invalid ) }"
-             [formControl]="password"
+             [ngClass]="{'has-error' : registrationForm.controls['password'].hasError('required') && (registrationForm.controls['password'].touched || invalid ) }"
+             formControlName="password"
              placeholder="Password" />
     </div>
   </div>
   <div class="form-group">
-    <button class="btn btn-primary" data-dismiss="modal">SignUp</button>
+    <button type="submit" class="btn btn-primary" data-dismiss="modal">SignUp</button>
   </div>
 </form>
