@@ -5,7 +5,7 @@ import {AuthorizationModule} from './authorization/authorization.module';
 
 import { AppComponent } from './app.component';
 import { ModalComponent } from './modal/modal.component';
-import { ModalService } from './services/modal/modal.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -15,9 +15,10 @@ import { ModalService } from './services/modal/modal.service';
   ],
   imports: [
     BrowserModule,
-    AuthorizationModule
+    AuthorizationModule,
+    BrowserAnimationsModule
   ],
-  providers: [ModalService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

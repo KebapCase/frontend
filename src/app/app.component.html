@@ -1,17 +1,12 @@
 <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">Navbar</a>
     <div class="navbar-nav">
-      <a  class="nav-item nav-link" (click)="openModal('custom-modal-1')">SignIn</a>
+      <a  class="nav-item nav-link" (click)="openModal()">SignIn</a>
     </div>
 </nav>
 
-<app-modal id="custom-modal-1">
-  <div class="modalWindow">
-    <div class="modalWindow-body">
-      <app-authorize-modal (authorizeComplited)="closeModal('custom-modal-1')"></app-authorize-modal>
-    </div>
-  </div>
-  <div class="modalWindow-background"></div>
+<app-modal [(visibility)]="modalVisibility" (modalClose)="closeModal()">
+  <app-authorize-modal (authorizeComplited)="closeModal()"></app-authorize-modal>
 </app-modal>
 
 <div style="text-align:center">

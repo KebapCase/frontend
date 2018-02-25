@@ -1,45 +1,34 @@
-import {Component, OnInit, Input, ElementRef} from '@angular/core';
-import {ModalService} from '../services/modal/modal.service';
-import * as $ from 'jquery';
-import { JQuery } from 'jquery';
+import {Component, OnInit, Input, ElementRef, Output, EventEmitter} from '@angular/core';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-modal',
-  moduleId: module.id.toString(),
-  template: '<ng-content></ng-content>'
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.css'],
+  animations: [
+    trigger('dialog', [
+      transition('void => *', [
+        style({ transform: 'scale3d(.3, .3, .3)' }),
+        animate(100)
+      ]),
+      transition('* => void', [
+        animate(100, style({ transform: 'scale3d(.0, .0, .0)' }))
+      ])
+    ])
+  ]
 })
 export class ModalComponent implements OnInit {
 
-  @Input() id: string;
-  private element: JQuery;
+  @Input() visibility: boolean;
+  @Output() modalClose = new EventEmitter();
 
-  constructor(private modalService: ModalService, private elem: ElementRef) {
-    this.element = $(elem.nativeElement);
-  }
+  constructor() {}
 
-  ngOnInit() {
-    if (!this.id) {
-      return;
-    }
-    const modal = this;
-    this.element.appendTo('body');
-    this.element.on('click', function (e: any) {
-      const target = $(e.target);
-      if (!target.closest('.modalWindow-body').length) {
-        modal.close();
-      }
-    });
-    this.modalService.add(this);
-  }
+  ngOnInit() {}
 
-  open(): void {
-    console.log('keeeeek');
-    this.element.show();
-    $('body').addClass('modalWindow-open');
-  }
 
   close(): void {
-    this.element.hide();
-    $('body').removeClass('modalWindow-open');
+    this.visibility = false;
+    this.modalClose.emit();
   }
 }
