@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, ElementRef, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
@@ -8,11 +8,11 @@ import {animate, style, transition, trigger} from '@angular/animations';
   animations: [
     trigger('dialog', [
       transition('void => *', [
-        style({ transform: 'scale3d(.3, .3, .3)' }),
-        animate(100)
+        style({ transform: 'translateY(-200px)' }),
+        animate(200)
       ]),
       transition('* => void', [
-        animate(100, style({ transform: 'scale3d(.0, .0, .0)' }))
+        animate(150, style({ transform: 'translateY(-200px)' }))
       ])
     ])
   ]
