@@ -6,3 +6,17 @@
   border-radius: 3px;
   box-shadow: -18.656px 24.758px 114px 0 rgba(0,0,0,.09);
 }
+
+.nav-item .nav-link,
+.nav-tabs {
+  border: 1px solid transparent;
+}
+
+.nav-item .nav-link.active {
+  border-bottom: 1px solid #EB2F57;
+  color: #4F80E1;
+}
+
+.nav-item .nav-link {
+  color: #292C44;
+}
