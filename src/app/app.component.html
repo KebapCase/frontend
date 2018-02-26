@@ -1,4 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="#">Navbar</a>
+    <div class="navbar-nav">
+      <a  class="nav-item nav-link" (click)="openModal()">SignIn</a>
+    </div>
+</nav>
+
+<app-modal [(visibility)]="modalVisibility" (modalClose)="closeModal()" class="dialog-login">
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-7">
+      <app-authorize-modal (authorizeComplited)="closeModal()"></app-authorize-modal>
+    </div>
+  </div>
+</app-modal>
+
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!

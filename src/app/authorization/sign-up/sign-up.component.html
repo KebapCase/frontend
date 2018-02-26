@@ -1,0 +1,55 @@
+<form [formGroup]="registrationForm" (ngSubmit)="postForm(registrationForm.value)">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span>
+          <input type="text" class="form-control"
+                 [ngClass]="{'has-error' : registrationForm.controls['firstName'].hasError('required') && (registrationForm.controls['firstName'].touched || invalid ) }"
+                 formControlName="firstName"
+                 placeholder="First Name" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span>
+          <input type="text" class="form-control"
+                 [ngClass]="{'has-error' : registrationForm.controls['secondName'].hasError('required') && (registrationForm.controls['secondName'].touched || invalid ) }"
+                 formControlName="secondName"
+                 placeholder="Second Name (not required)" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input type="email" class="form-control"
+             [ngClass]="{'has-error' : registrationForm.controls['email'].hasError('required') && (registrationForm.controls['email'].touched || invalid ) }"
+             formControlName="email"
+             placeholder="Email" />
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input type="password" class="form-control"
+             id="password"
+             [ngClass]="{'has-error' : registrationForm.controls['password'].hasError('required') && (registrationForm.controls['password'].touched || invalid ) }"
+             formControlName="password"
+             placeholder="Password" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" data-dismiss="modal">SignUp</button>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <app-social></app-social>
+    </div>
+  </div>
+</form>

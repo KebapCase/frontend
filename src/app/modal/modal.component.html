@@ -1,0 +1,4 @@
+<div [@dialog] *ngIf="visibility" class="dialog">
+  <ng-content></ng-content>
+</div>
+<div *ngIf="visibility" class="overlay" (click)="modalClose.emit()"></div>

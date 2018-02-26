@@ -1,0 +1,32 @@
+<form [formGroup]="loginForm" (ngSubmit)="postForm(loginForm.value)">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span>
+        <input type="text" class="form-control"
+               id="username"
+               [ngClass]="{'has-error' : loginForm.controls['username'].hasError('required') && (loginForm.controls['username'].touched || invalid ) }"
+               formControlName="username"
+               placeholder="User name or email" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" class="form-control"
+               id="password"
+               [ngClass]="{'has-error' : loginForm.controls['password'].hasError('required') && (loginForm.controls['password'].touched || invalid ) }"
+               formControlName="password"
+               placeholder="Password" />
+      </div>
+    </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <button (submit)="loginForm"  class="btn btn-primary" data-dismiss="modal">SignIn</button>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <app-social></app-social>
+    </div>
+  </div>
+</form>
