@@ -56,7 +56,6 @@ export class AuthService {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         this.setSession(authResult);
-        alert(localStorage.getItem('expires_at'));
         // this.router.navigate(['/home']);
       } else if (err) {
         // this.router.navigate(['/home']);
