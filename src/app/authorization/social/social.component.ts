@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-social',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SocialComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
+  loginFacebook() {
+    this.authService.loginFacebook();
+  }
+
+  loginTwitter() {
+    this.authService.loginTwitter();
+  }
+
+  loginGoogle() {
+    this.authService.loginGoogle();
+  }
 }
