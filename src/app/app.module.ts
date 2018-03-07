@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ModalComponent } from './modal/modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.service';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule, InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
@@ -19,6 +19,7 @@ import { InMemoryDataService } from './in-memory-data.service';
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpClient,
     InMemoryWebApiModule,
     AuthorizationModule,
     BrowserAnimationsModule,
