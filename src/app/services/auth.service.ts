@@ -62,7 +62,7 @@ export class AuthService {
   }
 
   private socialLogin() {
-    return this.http.post<User>(url, new User(this.userProfile), httpOptions).pipe(
+    return this.http.post<User>(url, new User(), httpOptions).pipe(
       tap(token => this.setServerSession(token))
     );
   }

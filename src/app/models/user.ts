@@ -7,11 +7,7 @@ export class User {
   image: string;
   role: string;
 
-  constructor(userProfile) {
-    this.username = userProfile.nickname;
-    this.password = userProfile.sub;
-    this.firstName = userProfile.given_name;
-    this.lastName = userProfile.family_name;
-    this.image = userProfile.picture;
+  constructor() {
+    this.username = 'd';
   }
 }
