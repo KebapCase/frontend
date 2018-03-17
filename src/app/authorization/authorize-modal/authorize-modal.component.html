@@ -1,11 +1,15 @@
-
 <div class="auth-dialog">
-  <app-tabs>
-    <app-tab [tabTitle]="'SignIn'">
-      <app-sing-in (afterSubmitEvent)="afterSubmitHandler($event)"></app-sing-in>
-    </app-tab>
-    <app-tab [tabTitle]="'SignUp'">
-      <app-sign-up (afterSubmitEvent)="afterSubmitHandler($event)"></app-sign-up>
-    </app-tab>
-  </app-tabs>
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-7 auth-form">
+    <app-tabs>
+      <app-tab [tabTitle]="'SignIn'">
+        <app-sing-in (afterSubmitEvent)="afterSubmitHandler($event)"></app-sing-in>
+      </app-tab>
+      <app-tab [tabTitle]="'SignUp'">
+        <app-sign-up (afterSubmitEvent)="afterSubmitHandler($event)"></app-sign-up>
+      </app-tab>
+    </app-tabs>
+    </div>
+  </div>
 </div>

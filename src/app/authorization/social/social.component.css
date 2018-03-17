@@ -11,6 +11,7 @@
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
+  color: #4F80E1;
 }
 
 #social-fb:hover {
@@ -25,14 +26,10 @@
   color: #d34836;
 }
 
-#social-em:hover {
-  color: #f39c12;
-}
-
 a {
   padding-right: 10px;
 }
 
 .social-buttons {
-  padding-top: 10px;
+  padding-top: 5px;
 }
