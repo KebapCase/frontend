@@ -9,12 +9,7 @@
 </nav>
 
 <app-modal [(visibility)]="modalVisibility" (modalClose)="closeModal()" class="dialog-login">
-  <div class="row">
-    <div class="col-md-5"></div>
-    <div class="col-md-7">
-      <app-authorize-modal (authorizeComplited)="closeModal()"></app-authorize-modal>
-    </div>
-  </div>
+  <app-authorize-modal (authorizeComplited)="closeModal()"></app-authorize-modal>
 </app-modal>
 
 <div style="text-align:center">

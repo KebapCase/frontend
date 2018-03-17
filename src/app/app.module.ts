@@ -10,11 +10,13 @@ import { AuthService } from './services/auth.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule, InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import {PreviewComponent} from './components/preview/preview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalComponent
+    ModalComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,

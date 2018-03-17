@@ -24,3 +24,7 @@ app-sign-up form,
 app-sing-in form {
   margin-top: 20px;
 }
+
+.btn.btn-primary {
+  background-color: #4F80E1;
+}
