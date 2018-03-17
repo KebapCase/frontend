@@ -7,6 +7,7 @@ import { TabsComponent } from './tabs/tabs.component';
   imports: [
     CommonModule
   ],
-  declarations: [TabComponent, TabsComponent]
+  declarations: [TabComponent, TabsComponent],
+  exports: [TabComponent, TabsComponent]
 })
 export class NavtabModule { }

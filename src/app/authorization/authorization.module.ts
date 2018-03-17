@@ -5,12 +5,14 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { SocialComponent } from './social/social.component';
 import { AuthorizeModalComponent } from './authorize-modal/authorize-modal.component';
+import { NavtabModule } from '../navtab/navtab.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NavtabModule
   ],
   declarations: [SingInComponent, SignUpComponent, SocialComponent, AuthorizeModalComponent],
   exports: [SingInComponent, SignUpComponent, SocialComponent, AuthorizeModalComponent]
