@@ -5,9 +5,12 @@ import {AuthorizationModule} from './authorization/authorization.module';
 
 import { AppComponent } from './app.component';
 import { ModalComponent } from './modal/modal.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthService } from './services/auth.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClientInMemoryWebApiModule, InMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 import {PreviewComponent} from './components/preview/preview.component';
-
 
 @NgModule({
   declarations: [
@@ -17,10 +20,16 @@ import {PreviewComponent} from './components/preview/preview.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    HttpClient,
+    InMemoryWebApiModule,
     AuthorizationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ AuthService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

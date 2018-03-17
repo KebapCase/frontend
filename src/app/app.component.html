@@ -1,7 +1,10 @@
+<pre class="full-profile">{{ profile | json }}</pre>
+
 <nav class="navbar navbar-light bg-faded">
   <a class="navbar-brand" href="#">Navbar</a>
     <div class="navbar-nav">
-      <a  class="nav-item nav-link" (click)="openModal()">SignIn</a>
+      <a *ngIf="!auth.isAuthenticated()" class="nav-item nav-link" (click)="openModal()">SignIn</a>
+      <a *ngIf="auth.isAuthenticated()" class="nav-item nav-link" (click)="logout()">LogOut</a>
     </div>
 </nav>
 
