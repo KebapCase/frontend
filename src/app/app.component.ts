@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {AuthService} from './services/auth.service';
+import {AuthorizeModalComponent} from './authorization/authorize-modal/authorize-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,10 @@ import {AuthService} from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  @ViewChild(AuthorizeModalComponent)
+    authModal: AuthorizeModalComponent;
+
   title = 'app';
-  modalVisibility: boolean;
   profile: any;
 
   constructor(public auth: AuthService) {
@@ -26,7 +29,7 @@ export class AppComponent implements OnInit {
   }
 
   openModal() {
-    this.modalVisibility = true;
+    this.authModal.open();
   }
 
   logout() {
@@ -34,7 +37,6 @@ export class AppComponent implements OnInit {
   }
 
   closeModal() {
-    this.modalVisibility = false;
   }
 
 }

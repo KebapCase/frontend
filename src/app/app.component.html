@@ -8,9 +8,8 @@
     </div>
 </nav>
 
-<app-modal [(visibility)]="modalVisibility" (modalClose)="closeModal()" class="dialog-login">
-  <app-authorize-modal (authorizeComplited)="closeModal()"></app-authorize-modal>
-</app-modal>
+<app-authorize-modal (modalClose)="closeModal()"></app-authorize-modal>
+
 
 <div style="text-align:center">
   <h1>
