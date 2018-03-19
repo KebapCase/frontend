@@ -1,21 +1,11 @@
 import {Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {animate, style, transition, trigger} from '@angular/animations';
+import {openDialogAnimation} from '../animations/openDialog';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
-  animations: [
-    trigger('dialog', [
-      transition('void => *', [
-        style({ transform: 'translateY(-200px)' }),
-        animate(200)
-      ]),
-      transition('* => void', [
-        animate(150, style({ transform: 'translateY(-200px)' }))
-      ])
-    ])
-  ]
+  animations: [openDialogAnimation]
 })
 export class ModalComponent implements OnInit {
 
