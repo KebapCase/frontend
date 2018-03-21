@@ -4,18 +4,18 @@
     <div class="col-md-7 auth-form">
       <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab">SignIn</a>
+          <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab">Sign In</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="signup-tab" data-toggle="tab" href="#singup" role="tab">SignUp</a>
+          <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab">Sign Up</a>
         </li>
       </ul>
 
       <div class="tab-content">
         <div class="tab-pane active justify-content-center" id="signin" role="tabpanel">
-          <app-sing-in (afterSubmitEvent)="afterSubmitHandler($event)"></app-sing-in>
+          <app-sign-in (afterSubmitEvent)="afterSubmitHandler($event)"></app-sign-in>
         </div>
-        <div class="tab-pane justify-content-center" id="singup" role="tabpanel">
+        <div class="tab-pane justify-content-center" id="signup" role="tabpanel">
           <app-sign-up (afterSubmitEvent)="afterSubmitHandler($event)"></app-sign-up>
         </div>
       </div>

@@ -1,0 +1,18 @@
+.login {
+  color: rgba(0, 0, 0, .5);
+  min-width: 65px;
+}
+
+.navbarOption:hover {
+  color: black !important;
+}
+
+@media (min-width: 992px) {
+  .login {
+    padding: 0;
+  }
+}
+
+.nav-item {
+  padding-right: 20px;
+}
