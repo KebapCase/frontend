@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-5"></div>
       <div class="col-md-7 auth-form">
-        <app-tabs>
+        <app-tabs *ngIf="isAuthenticationModalVisible">
           <app-tab [tabTitle]="'SignIn'">
             <app-sing-in (afterSubmitEvent)="afterSubmitHandler($event)"></app-sing-in>
           </app-tab>

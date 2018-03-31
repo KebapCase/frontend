@@ -6,7 +6,7 @@ import {fadeInAnimation} from '../../animations/fadeIn';
   selector: 'app-tab',
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.css'],
-  animations: [fadeInAnimation]
+  animations: [ fadeInAnimation ]
 })
 export class TabComponent {
 

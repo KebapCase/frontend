@@ -17,7 +17,6 @@ export class TabsComponent {
       tab.active = true;
     }
     this.tabs.push(tab);
-    console.log(tab);
   }
 
   selectTab(tab: TabComponent) {
