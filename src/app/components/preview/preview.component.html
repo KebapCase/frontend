@@ -1,16 +1,13 @@
 <div class="block">
-  <div class="image-preview">
-    <a routerLink="/project/{{project.id}}" routerLinkActive="active"><img src="{{project.image}}"></a>
-  </div>
   <div class="content">
     <div class="fluid">
       <div class="title">
-        <a *ngIf="project.title" routerLink="/project/{{project.id}}" routerLinkActive="active"><p>{{project.title}}</p></a>
-        <a *ngIf="!project.title" routerLink="/project/{{project.id}}" routerLinkActive="active"><p >{{'Preview.projectName' | translate:lang}}</p></a>
+        <a routerLinkActive="active"><p>Project Name</p></a>
+        <!--<a *ngIf="!project.title" routerLink="/project/{{project.id}}" routerLinkActive="active"><p >{{'Preview.projectName' | translate:lang}}</p></a>-->
       </div>
       <div class="description">
-        <p *ngIf="project.description">{{project.description}}</p>
-        <p *ngIf="!project.description">{{'Preview.shortDesc' | translate:lang}}</p>
+        <p >Some text for description</p>
+        <!--<p *ngIf="!project.description">{{'Preview.shortDesc' | translate:lang}}</p>-->
       </div>
     </div>
     <div class="total-progress">
@@ -19,16 +16,17 @@
           <span class="sr-only">60% Complete</span>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-6">
-          <strong class="card-res-strong">{{project.currentSum}} BYN</strong>
-          <div class="card-res-txt">{{'Preview.current' | translate:lang}} (0%)</div>
-        </div>
-        <div class="col-xs-6">
-          <strong class="card-res-strong">{{project.leftDays}} {{'Preview.days' | translate:lang}}</strong>
-          <div class="card-res-txt">{{'Preview.left' | translate:lang}}</div>
+      <div class="container">
+        <div class="row detail">
+          <div class="col-xs-6 detailDays">
+            <strong class="card-res-strong">Days left: 10</strong>
+          </div>
+          <div class="col-xs-6 detailButton">
+            <button  type="button" class="btn btn-outline-success btn-sm">More</button>
+          </div>
         </div>
       </div>
+
 
     </div>
   </div>
