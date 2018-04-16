@@ -1,0 +1,33 @@
+.profile-bg {
+  min-height: 400px;
+  width: 100%;
+  background-color: #4b4b4b;
+  margin-bottom: -270px;
+}
+
+.profile-user-info {
+  width: 600px;
+  min-height: 250px;
+  margin: 0 auto;
+  background-color: #eeeeee;
+}
+
+.profile-image img {
+  padding: 20px;
+  border-radius: 2px;
+  max-width: 300px;
+}
+
+.profile-user-gen-info {
+  padding: 20px;
+}
+
+.profile-user-gen-info .username {
+  font-size: 25px;
+  margin-bottom: -10px;
+}
+
+.profile-user-gen-info .username + span {
+  font-size: 11px;
+  color: #4b4b4b;
+}
