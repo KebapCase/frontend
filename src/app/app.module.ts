@@ -6,6 +6,7 @@ import {AuthorizationModule} from './authorization/authorization.module';
 import { AppComponent } from './app.component';
 import { ModalComponent } from './modal/modal.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
 import {PreviewComponent} from './components/preview/preview.component';
 
 
@@ -14,6 +15,8 @@ import {PreviewComponent} from './components/preview/preview.component';
     AppComponent,
     ModalComponent,
     PreviewComponent
+    ModalComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

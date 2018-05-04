@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SingInComponent } from './sing-in/sing-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { SocialComponent } from './social/social.component';
@@ -12,7 +12,7 @@ import { AuthorizeModalComponent } from './authorize-modal/authorize-modal.compo
     CommonModule,
     ReactiveFormsModule
   ],
-  declarations: [SingInComponent, SignUpComponent, SocialComponent, AuthorizeModalComponent],
-  exports: [SingInComponent, SignUpComponent, SocialComponent, AuthorizeModalComponent]
+  declarations: [SignInComponent, SignUpComponent, SocialComponent, AuthorizeModalComponent],
+  exports: [SignInComponent, SignUpComponent, SocialComponent, AuthorizeModalComponent]
 })
 export class AuthorizationModule { }
