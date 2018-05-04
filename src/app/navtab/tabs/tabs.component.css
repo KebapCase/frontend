@@ -1,0 +1,28 @@
+.tabControls {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tabs {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tabs .tab {
+  cursor: pointer;
+  display: inline;
+  font-size: 1.2em;
+  color: #292C44;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.tabs:last-child {
+  margin-right: 0;
+}
+
+.tabs .tab.tab-active {
+  color: #4F80E1;
+  border-bottom: 0.1em solid #EB2F57;
+}
+

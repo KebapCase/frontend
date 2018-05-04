@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {AuthService} from './services/auth.service';
+import {AuthorizeModalComponent} from './authorization/authorize-modal/authorize-modal.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  isAuthenticationModalVisible: boolean;
+export class AppComponent implements OnInit {
+  @ViewChild(AuthorizeModalComponent)
+    authModal: AuthorizeModalComponent;
+
+  title = 'app';
+  profile: any;
 
   constructor () {}
 
@@ -16,6 +22,8 @@ export class AppComponent {
 
   closeAuthenticationModal() {
     this.isAuthenticationModalVisible = false;
+  openModal() {
+    this.authModal.open();
   }
 
   getLoginAction = (): void => {
@@ -29,5 +37,6 @@ export class AppComponent {
     return 'Sign In';
     // TODO: it should be smth like that
     // this.authenticationService.isAuthenticated ? 'Sign Out' : 'Sign In'
+  closeModal() {
   }
 }
