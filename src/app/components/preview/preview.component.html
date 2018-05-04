@@ -1,0 +1,33 @@
+<div class="block">
+  <div class="content">
+    <div class="fluid">
+      <div class="title">
+        <a routerLinkActive="active"><p>Project Name</p></a>
+        <!--<a *ngIf="!project.title" routerLink="/project/{{project.id}}" routerLinkActive="active"><p >{{'Preview.projectName' | translate:lang}}</p></a>-->
+      </div>
+      <div class="description">
+        <p >Some text for description</p>
+        <!--<p *ngIf="!project.description">{{'Preview.shortDesc' | translate:lang}}</p>-->
+      </div>
+    </div>
+    <div class="total-progress">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width]="20 + '%'" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          <span class="sr-only">60% Complete</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row detail">
+          <div class="col-xs-6 detailDays">
+            <strong class="card-res-strong">Days left: 10</strong>
+          </div>
+          <div class="col-xs-6 detailButton">
+            <button  type="button" class="btn btn-outline-success btn-sm">More</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
