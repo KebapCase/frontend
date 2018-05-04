@@ -20,14 +20,14 @@ export class AppComponent {
 
   getLoginAction = (): void => {
     this.openAuthenticationModal();
-    //TODO: it should be smth like that
+    // TODO: it should be smth like that
     // this.authenticationService.isAuthenticated ? this.openAuthenticationModal() :
     // this.authenticationService.logout()
-  };
+  }
 
   getLoginTitle = (): string => {
     return 'Sign In';
-    //TODO: it should be smth like that
+    // TODO: it should be smth like that
     // this.authenticationService.isAuthenticated ? 'Sign Out' : 'Sign In'
-  };
+  }
 }
