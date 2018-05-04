@@ -10,7 +10,8 @@ export class TabsComponent {
 
   tabs: TabComponent[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   addTab(tab: TabComponent) {
     if (this.tabs.length === 0) {

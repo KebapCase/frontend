@@ -1,20 +1,22 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { openDialogAnimation } from '../../animations/openDialog';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {openDialogAnimation} from '../../animations/openDialog';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
-  animations: [ openDialogAnimation ]
+  animations: [openDialogAnimation]
 })
 export class ModalComponent implements OnInit {
 
   @Input() visibility: boolean;
   @Output() modalClose = new EventEmitter();
 
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 
   close(): void {

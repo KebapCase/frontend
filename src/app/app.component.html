@@ -2,13 +2,8 @@
             [loginTitle]="getLoginTitle()">
 </app-navbar>
 
-<app-modal [(visibility)]="isAuthenticationModalVisible"
-           (modalClose)="closeAuthenticationModal()"
-           class="dialog-login">
-  <app-authorize-modal (authorizeComplited)="closeAuthenticationModal()"></app-authorize-modal>
-</app-modal>
-
 <app-authorize-modal (modalClose)="closeModal()"></app-authorize-modal>
+
 <div class="container">
   <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">

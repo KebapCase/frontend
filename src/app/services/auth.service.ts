@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import {Injectable} from '@angular/core';
+import {Router} from '@angular/router';
 import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import * as jwt_decode from 'jwt-decode';
-import { User } from '../models/user';
+import {User} from '../models/user';
 import {tap} from 'rxjs/operators';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 const url = '';
 
@@ -25,8 +25,9 @@ export class AuthService {
     scope: 'openid profile'
   });
 
-  constructor( private http: HttpClient
-               /*public router: Router*/) {}
+  constructor(private http: HttpClient
+              /*public router: Router*/) {
+  }
 
   public getProfile(cb): void {
     const accessToken = localStorage.getItem('access_token');

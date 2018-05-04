@@ -17,7 +17,8 @@ export class NavbarComponent implements OnInit {
     .set('New', '#new')
     .set('About', '#about');
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {
   }

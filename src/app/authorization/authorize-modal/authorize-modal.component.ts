@@ -10,7 +10,8 @@ export class AuthorizeModalComponent implements OnInit {
   @Output() modalClose = new EventEmitter();
   isAuthenticationModalVisible = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
