@@ -16,6 +16,7 @@ import {ModuleRouting} from './app.routing.module';
 import {ProfileModule} from './profile/profile.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +33,7 @@ import {ProfileModule} from './profile/profile.module';
     Ng2CloudinaryModule,
     ModalModule,
     FileUploadModule,
-    ModuleRouting,
-    ProfileModule
+    ModuleRouting
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { GenInformationComponent } from './gen-information/gen-information.component';
-import { ModuleRouting } from './profile.routing.module';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {GenInformationComponent} from './gen-information/gen-information.component';
+import {ModuleRouting} from './profile.routing.module';
 
 @NgModule({
   imports: [
@@ -10,4 +10,5 @@ import { ModuleRouting } from './profile.routing.module';
   ],
   declarations: [GenInformationComponent]
 })
-export class ProfileModule { }
+export class ProfileModule {
+}
