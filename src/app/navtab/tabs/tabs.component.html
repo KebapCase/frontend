@@ -1,0 +1,10 @@
+<div>
+  <div class="tabControls">
+    <ul class="tabs justify-content-center">
+      <li class="tab" *ngFor="let tab of tabs" [ngClass]="{'tab-active' : tab.active}" (click)="selectTab(tab)">{{
+        tab.tabTitle }}
+      </li>
+    </ul>
+  </div>
+  <ng-content></ng-content>
+</div>

@@ -1,4 +1,4 @@
-.auth-dialog{
+.auth-dialog {
   display: block;
   width: 100%;
   padding: 20px;
@@ -7,9 +7,10 @@
 .auth-form {
   display: block;
   width: 100%;
+  padding: 20px 10px 5px 10px;
   background-color: white;
   border-radius: 3px;
-  box-shadow: -18.656px 24.758px 114px 0 rgba(0,0,0,.09);
+  box-shadow: -18.656px 24.758px 114px 0 rgba(0, 0, 0, .09);
 }
 
 .nav-item .nav-link,

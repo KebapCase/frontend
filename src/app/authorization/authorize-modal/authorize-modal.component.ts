@@ -7,16 +7,27 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class AuthorizeModalComponent implements OnInit {
 
-  @Output() authorizeComplited = new EventEmitter();
+  @Output() modalClose = new EventEmitter();
+  isAuthenticationModalVisible = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   afterSubmitHandler(value: boolean) {
     if (value === true) {
-      this.authorizeComplited.emit();
+      this.modalClose.emit(true);
     }
+  }
+
+  open() {
+    this.isAuthenticationModalVisible = true;
+  }
+
+  close() {
+    this.isAuthenticationModalVisible = false;
+    this.modalClose.emit(false);
   }
 }
