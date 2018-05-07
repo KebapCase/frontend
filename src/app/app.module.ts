@@ -12,6 +12,9 @@ import {DragAndDropComponent} from './components/drag-and-drop/drag-and-drop.com
 import {Ng2FileDropModule} from 'ng2-file-drop';
 import {Ng2CloudinaryModule} from 'ng2-cloudinary';
 import {FileUploadModule} from 'ng2-file-upload';
+import { CreateEventComponent } from './components/create-event/create-event.component';
+import {AppRoutingModule} from './app-routing.module';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 
 @NgModule({
@@ -19,7 +22,9 @@ import {FileUploadModule} from 'ng2-file-upload';
     AppComponent,
     PreviewComponent,
     DragAndDropComponent,
-    NavbarComponent
+    NavbarComponent,
+    CreateEventComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,8 @@ import {FileUploadModule} from 'ng2-file-upload';
     Ng2FileDropModule,
     Ng2CloudinaryModule,
     ModalModule,
-    FileUploadModule
+    FileUploadModule,
+    AppRoutingModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
