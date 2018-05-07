@@ -14,6 +14,9 @@ import {Ng2CloudinaryModule} from 'ng2-cloudinary';
 import {FileUploadModule} from 'ng2-file-upload';
 import {ModuleRouting} from './app.routing.module';
 import {ProfileModule} from './profile/profile.module';
+import { CreateEventComponent } from './components/create-event/create-event.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import {AppRoutingModule} from './app-routing.module';
 
 
 
@@ -22,7 +25,9 @@ import {ProfileModule} from './profile/profile.module';
     AppComponent,
     PreviewComponent,
     DragAndDropComponent,
-    NavbarComponent
+    NavbarComponent,
+    CreateEventComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +39,7 @@ import {ProfileModule} from './profile/profile.module';
     ModalModule,
     FileUploadModule,
     ModuleRouting
+    AppRoutingModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
