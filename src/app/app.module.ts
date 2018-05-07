@@ -12,9 +12,11 @@ import {DragAndDropComponent} from './components/drag-and-drop/drag-and-drop.com
 import {Ng2FileDropModule} from 'ng2-file-drop';
 import {Ng2CloudinaryModule} from 'ng2-cloudinary';
 import {FileUploadModule} from 'ng2-file-upload';
+import {ModuleRouting} from './app.routing.module';
+import {ProfileModule} from './profile/profile.module';
 import { CreateEventComponent } from './components/create-event/create-event.component';
-import {AppRoutingModule} from './app-routing.module';
 import { MainPageComponent } from './components/main-page/main-page.component';
+
 
 
 @NgModule({
@@ -35,7 +37,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     Ng2CloudinaryModule,
     ModalModule,
     FileUploadModule,
-    AppRoutingModule
+    ModuleRouting
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
