@@ -1,5 +1,11 @@
 {
   "compileOnSave": false,
+  "include": [
+    "src//*",
+    "node_modules/tslerp/index.ts",
+    "node_modules/ng2-file-drop/index.ts",
+    "node_modules/ng2-file-drop//.ts"
+  ],
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

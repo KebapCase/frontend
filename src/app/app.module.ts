@@ -8,12 +8,17 @@ import {PreviewComponent} from './components/preview/preview.component';
 import {AuthService} from './services/auth.service';
 import {HttpClientModule} from '@angular/common/http';
 import {ModalModule} from './modal/modal.module';
+import {DragAndDropComponent} from './components/drag-and-drop/drag-and-drop.component';
+import {Ng2FileDropModule} from 'ng2-file-drop';
+import {Ng2CloudinaryModule} from 'ng2-cloudinary';
+import {FileUploadModule} from 'ng2-file-upload';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PreviewComponent,
+    DragAndDropComponent,
     NavbarComponent
   ],
   imports: [
@@ -21,7 +26,10 @@ import {ModalModule} from './modal/modal.module';
     AuthorizationModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ModalModule
+    Ng2FileDropModule,
+    Ng2CloudinaryModule,
+    ModalModule,
+    FileUploadModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
