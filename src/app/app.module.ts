@@ -16,7 +16,6 @@ import {ModuleRouting} from './app.routing.module';
 import {ProfileModule} from './profile/profile.module';
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import {AppRoutingModule} from './app-routing.module';
 
 
 
@@ -39,7 +38,6 @@ import {AppRoutingModule} from './app-routing.module';
     ModalModule,
     FileUploadModule,
     ModuleRouting
-    AppRoutingModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
