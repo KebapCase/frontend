@@ -16,6 +16,9 @@ import {ModuleRouting} from './app.routing.module';
 import {ProfileModule} from './profile/profile.module';
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import {InputTextModule} from 'primeng/inputtext';
+import {CardModule} from 'primeng/card';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 
 
@@ -37,7 +40,10 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     Ng2CloudinaryModule,
     ModalModule,
     FileUploadModule,
-    ModuleRouting
+    ModuleRouting,
+    InputTextModule,
+    CardModule,
+    InputTextareaModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

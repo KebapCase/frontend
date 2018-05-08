@@ -1,3 +1,41 @@
-<p>
-  create-event works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <span class="ui-float-label">
+            <input id="float-input" type="text" size="55" pInputText>
+            <label for="float-input">Event Name</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card" style="text-align: center">
+        <h5>Please, write short description of event</h5>
+        <span class="ui-float-label">
+            <textarea [rows]="5" [cols]="56" pInputTextarea autoResize="false"></textarea>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card" style="text-align: center">
+        <h5>You can attach some files</h5>
+        <app-drag-and-drop></app-drag-and-drop>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card" style="text-align: center">
+        <button type="button" style="width: 150px; margin-right: 20px" class="btn btn-outline-secondary">Clear</button>
+        <button type="button" style="width: 150px" class="btn btn-outline-success">Create</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
