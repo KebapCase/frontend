@@ -13,8 +13,6 @@ export class NavbarComponent implements OnInit {
   navbarOptions = new Map()
     .set('Home', 'home')
     .set('Categories', 'categories')
-    .set('Popular', 'popular')
-    .set('New', 'new')
     .set('About', 'about');
 
   constructor() {

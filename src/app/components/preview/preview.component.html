@@ -2,10 +2,10 @@
   <div class="content">
     <div class="fluid">
       <div class="title">
-        <a routerLinkActive="active"><p>Project Name</p></a>
+        <a routerLinkActive="active"><p>{{title}}</p></a>
       </div>
       <div class="description">
-        <p>Some text for description</p>
+        <p>{{description}}</p>
       </div>
     </div>
     <div class="total-progress">
@@ -18,15 +18,13 @@
       <div class="container">
         <div class="row detail">
           <div class="col-xs-6 detailDays">
-            <strong class="card-res-strong">Days left: 10</strong>
+            <strong class="card-res-strong">Days left: {{daysLeft}}</strong>
           </div>
           <div class="col-xs-6 detailButton">
             <button type="button" class="btn btn-outline-success btn-sm">More</button>
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
 </div>
