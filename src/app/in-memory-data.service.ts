@@ -1,19 +1,25 @@
-import { InMemoryDbService } from 'angular-in-memory-web-api';
+import {Event} from './models/Event';
 
-export class InMemoryDataService implements InMemoryDbService {
-  createDb() {
-    const heroes = [
-      { id: 11, name: 'Mr. Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
-    ];
-    return {heroes};
+export class InMemoryDataService {
+
+  static id = 124;
+  private static eventsByIds: Map<number, Event> = new Map([
+    [120, new Event('desdefwf', 'weewwtew', 2, 'ew')],
+    [121, new Event('wetrehtrjt', 'wetew', 1, 'ewrwer')],
+    [122, new Event('weghnstrjyu', 'ewgdsgdg', 2, 'werwer')],
+    [123, new Event('wegtwetew', 'wetewtw', 4, 'werewr')]]);
+
+  public static pushEvent(e: Event) {
+    InMemoryDataService.id++;
+    InMemoryDataService.eventsByIds.set(InMemoryDataService.id, e);
   }
+
+  public static getEvents(): Event[] {
+    return Array.from(InMemoryDataService.eventsByIds.values());
+  }
+
+  public static getEvent(id: number): Event {
+    return InMemoryDataService.eventsByIds.get(id);
+  }
+
 }
