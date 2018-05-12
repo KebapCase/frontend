@@ -9,11 +9,12 @@ export class NavbarComponent implements OnInit {
 
   @Output() loginActionEmitter = new EventEmitter();
   @Input() loginTitle: string;
+  @Input() showAndru: boolean;
 
   navbarOptions = new Map()
     .set('Home', 'home')
     .set('Categories', 'categories')
-    .set('About', 'about');
+    .set('New', 'new');
 
   constructor() {
   }

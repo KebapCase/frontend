@@ -17,9 +17,7 @@ export class AuthorizeModalComponent implements OnInit {
   }
 
   afterSubmitHandler(value: boolean) {
-    if (value === true) {
       this.modalClose.emit(true);
-    }
   }
 
   open() {

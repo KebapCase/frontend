@@ -14,7 +14,8 @@
           </li>
         </ul>
       </div>
-      <a class="nav-link login navbarOption" href="#" (click)="loginAction()">{{loginTitle}}</a>
+      <a *ngIf="showAndru" routerLink="/profile/1">Andrushka Repkovetskiy</a>
+      <a *ngIf="!showAndru" class="nav-link login navbarOption" href="#" (click)="loginAction()">{{loginTitle}}</a>
     </div>
   </div>
 </nav>

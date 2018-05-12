@@ -9,12 +9,13 @@ import {AuthorizeModalComponent} from './authorization/authorize-modal/authorize
 export class AppComponent implements OnInit {
   @ViewChild(AuthorizeModalComponent)
   authModal: AuthorizeModalComponent;
+  andru = false;
 
   constructor() {
   }
 
   getLoginAction = (): void => {
-    this.authModal.open()
+    this.authModal.open();
     // TODO: it should be smth like that
     // this.authenticationService.isAuthenticated ? this.openAuthenticationModal() :
     // this.authenticationService.logout()
@@ -27,6 +28,8 @@ export class AppComponent implements OnInit {
   }
 
   closeModal() {
+    this.authModal.close();
+    this.andru = true;
   }
 
   ngOnInit(): void {
