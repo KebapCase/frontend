@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {CustomEvent} from '../../models/event';
 
 @Component({
   selector: 'app-preview',
@@ -7,9 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PreviewComponent implements OnInit {
 
-  @Input('title') title: string;
-  @Input('description') description: string;
-  @Input('daysLeft') daysLeft: number;
+  @Input() event: CustomEvent;
+
 
   constructor() {
   }

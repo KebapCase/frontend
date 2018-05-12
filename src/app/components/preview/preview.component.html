@@ -2,10 +2,10 @@
   <div class="content">
     <div class="fluid">
       <div class="title">
-        <a routerLinkActive="active"><p>{{title}}</p></a>
+        <a routerLinkActive="active"><p>{{event.title}}</p></a>
       </div>
       <div class="description">
-        <p>{{description}}</p>
+        <p>{{event.description}}</p>
       </div>
     </div>
     <div class="total-progress">
@@ -18,10 +18,10 @@
       <div class="container">
         <div class="row detail">
           <div class="col-xs-6 detailDays">
-            <strong class="card-res-strong">Days left: {{daysLeft}}</strong>
+            <strong class="card-res-strong">Days left: {{event.daysLeft}}</strong>
           </div>
           <div class="col-xs-6 detailButton">
-            <button type="button" class="btn btn-outline-success btn-sm">More</button>
+            <a class="btn btn-outline-success btn-sm" routerLink="event/{{event.id}}">More</a>
           </div>
         </div>
       </div>

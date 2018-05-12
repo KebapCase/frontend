@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let e of events">
-      <app-preview title="{{e.title}}" description="{{e.description}}" daysLeft="{{e.daysLeft}}"></app-preview>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let event of events">
+      <app-preview [event]="event"></app-preview>
     </div>
   </div>
 </div>

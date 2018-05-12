@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InMemoryDataService } from '../../in-memory-data.service';
-import { Event } from '../../models/event';
+import { CustomEvent } from '../../models/event';
 
 @Component({
   selector: 'app-main-page',
@@ -9,7 +9,7 @@ import { Event } from '../../models/event';
 })
 export class MainPageComponent implements OnInit {
 
-  events: Event[];
+  events: CustomEvent[];
   constructor() { }
 
   ngOnInit() {

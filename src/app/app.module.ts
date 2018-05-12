@@ -19,6 +19,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import {EventPageComponent} from './components/event-page/event-page.component';
+import {GalleriaModule} from 'primeng/galleria';
 
 
 
@@ -29,7 +31,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     DragAndDropComponent,
     NavbarComponent,
     CreateEventComponent,
-    MainPageComponent
+    MainPageComponent,
+    EventPageComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
     ModuleRouting,
     InputTextModule,
     CardModule,
-    InputTextareaModule
+    InputTextareaModule,
+    GalleriaModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

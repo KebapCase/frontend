@@ -27,6 +27,6 @@ export class DragAndDropComponent implements OnInit {
 
   public dragFileAccepted(acceptedFile: Ng2FileDropAcceptedFile) {
     console.log(acceptedFile);
-    this.uploader.uploadAll();
+      this.uploader.uploadAll();
   }
 }

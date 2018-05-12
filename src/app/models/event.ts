@@ -1,4 +1,4 @@
-export class Event {
+export class CustomEvent {
   id: number;
   title: string;
   description: string;
