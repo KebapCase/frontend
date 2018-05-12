@@ -5,9 +5,9 @@
         <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span>
           <input type="text" class="form-control"
-                 [ngClass]="{'has-error' : registrationForm.controls['firstName'].hasError('required') && (registrationForm.controls['firstName'].touched || invalid ) }"
                  formControlName="firstName"
                  placeholder="First Name"/>
+          <div class="alert" *ngIf="!registrationForm.controls['firstName'].valid && registrationForm.controls['firstName'].touched"> Name is required.</div>
         </div>
       </div>
     </div>
@@ -16,7 +16,6 @@
         <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span>
           <input type="text" class="form-control"
-                 [ngClass]="{'has-error' : registrationForm.controls['secondName'].hasError('required') && (registrationForm.controls['secondName'].touched || invalid ) }"
                  formControlName="secondName"
                  placeholder="Second Name (not required)"/>
         </div>
@@ -27,9 +26,9 @@
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
       <input type="email" class="form-control"
-             [ngClass]="{'has-error' : registrationForm.controls['email'].hasError('required') && (registrationForm.controls['email'].touched || invalid ) }"
              formControlName="email"
              placeholder="Email"/>
+      <div class="alert" *ngIf="!registrationForm.controls['email'].valid && registrationForm.controls['email'].touched"> Email is required.</div>
     </div>
   </div>
   <div class="form-group">
@@ -40,6 +39,7 @@
              [ngClass]="{'has-error' : registrationForm.controls['password'].hasError('required') && (registrationForm.controls['password'].touched || invalid ) }"
              formControlName="password"
              placeholder="Password"/>
+      <div class="alert" *ngIf="!registrationForm.controls['password'].valid && registrationForm.controls['password'].touched"> Password is required.</div>
     </div>
   </div>
   <div class="row">

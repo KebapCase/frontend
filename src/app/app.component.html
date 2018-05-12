@@ -3,7 +3,7 @@
             [showAndru]="andru">
 </app-navbar>
 
-<app-authorize-modal (modalClose)="closeModal()"></app-authorize-modal>
+<app-authorize-modal (modalClose)="closeModal($event)"></app-authorize-modal>
 
 <router-outlet></router-outlet>
 

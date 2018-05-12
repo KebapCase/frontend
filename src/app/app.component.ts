@@ -27,9 +27,11 @@ export class AppComponent implements OnInit {
     // this.authenticationService.isAuthenticated ? 'Sign Out' : 'Sign In'
   }
 
-  closeModal() {
-    this.authModal.close();
-    this.andru = true;
+  closeModal(event) {
+    if (event === true) {
+      this.authModal.close();
+      this.andru = true;
+    }
   }
 
   ngOnInit(): void {
