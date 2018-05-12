@@ -4,9 +4,9 @@ export class InMemoryDataService {
 
   static id = 124;
   private static eventsByIds: Map<number, CustomEvent> = new Map([
-    [120, new CustomEvent('desdefwf', 'weewwtew', 2, 'ew')],
-    [121, new CustomEvent('wetrehtrjt', 'wetew', 1, 'ewrwer')],
-    [122, new CustomEvent('weghnstrjyu', 'ewgdsgdg', 2, 'werwer')],
+    [120, new CustomEvent('Football', "Let's play", 2, 'assets/img/faces/football.jpg')],
+    [121, new CustomEvent('Marathon', 'Run hard', 1, 'assets/img/faces/marathon.jpg')],
+    [122, new CustomEvent('Strikeball', "I'm not in danger, I am the danger", 2, 'assets/img/faces/strikeball.jpg')],
     [123, new CustomEvent('wegtwetew', 'wetewtw', 4, 'werewr')]]);
 
   public static pushEvent(e: CustomEvent) {
